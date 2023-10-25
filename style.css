@@ -330,7 +330,7 @@ main{
 
 /* ------------ Skills Section ----------- */
 #skills{
-    min-height: 100vh;
+    min-height: var(--_100vh);
     position: relative;
 }
 .skill-container{
