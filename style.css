@@ -126,7 +126,7 @@ main{
 #about{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#3338,#4448), url('img/WhatsApp\ Image\ 2023-10-25\ at\ 20.33.54_2c928877.jpg') center no-repeat fixed;
+    background: linear-gradient(#3338,#4448), url('img/aboutBG.jpg') center no-repeat fixed;
     background-size: cover;
     display: flex;
     align-items: center;
