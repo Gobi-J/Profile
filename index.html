@@ -11,6 +11,13 @@
   <body>
     <div class="cursor-style"></div>
     <div class="cursor-style2"></div>
+    <div class="popup" id="pop">
+        <button><i class="fa-solid fa-caret-right"></i></button>
+        <div>
+            <input type="text" name="user" placeholder="Enter Name">
+            <button onclick="greet()">Enter</button>
+        </div>
+    </div>
     
     <div class="container">
         <div class="socials">
@@ -37,13 +44,13 @@
 
         <main id="home">
         <div class="hero">
-            <h3>Hello All</h3>
+            <h3 id="greetingUser">Hello All</h3>
             <span>I'm </span>
             <h1>GOBI J</h1>
             <p>Passionate in frontend development and Java programming</p>
         </div>
         </main>
-
+        
         <section id="about">
         <div class="abouts">
             <div class="about-text">
@@ -357,12 +364,14 @@
                     <h1>Attendance Monitoring System Using Artificial Intelligence</h1>
                     <h4>Srishti'22</h4>
                     <h5>PSG College of Technology, Coimbatore</h5>
+                    <a href="https://onedrive.live.com/embed?resid=A1778646B0C43213%21130362&authkey=!AAp2F2TMj3USSfI&em=2" target="_blank">View Sample</a>
                 </div>
                 <div class="paper">
                     <iframe src="https://onedrive.live.com/embed?resid=A1778646B0C43213%21130360&authkey=!AOwjxlMbDskK1ko&em=2" frameborder="0" loading="lazy"></iframe>
                     <h1>Accident Monitoring System Using Artificial Intelligence</h1>
                     <h4>Sympo'22</h4>
                     <h5>Government College of Engineering, Bargur</h5>
+                    <a href="http://onedrive.live.com/embed?resid=A1778646B0C43213%21130360&authkey=!AOwjxlMbDskK1ko&em=2" target="_blank">View Sample</a>
                 </div>
                 </div>
             </div>
@@ -383,7 +392,7 @@
                     <div class="contact-img"></div>
                     <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScrEROSw3_rWVIo_aXKQj0mNUr7GKCJ6Xhfbo1h_5HHacnDeg/formResponse" method="post" target="_blank" enctype="multipart/form-data" class="contact-form">
                         <h2>Leave a Message</h2>
-                        <input type="text" class="field" placeholder="Name" name="entry.1188780562">
+                        <input id="contactname" type="text" class="field" placeholder="Name" name="entry.1188780562">
                         <input type="text" class="field" placeholder="Email" required name="entry.2115020532">
                         <input type="text" class="field" placeholder="Phone" name="entry.1264265779">
                         <textarea placeholder="Message" class="field" required name="entry.14686942"></textarea>
@@ -397,8 +406,8 @@
             <div class="foot">
                 <h2>Made by Gobi J - &copy;All rights reserved</h2>
             </div>
-            <div class="back-to-top"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
         </footer>
+        <div class="back-to-top"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
     </div>
   </body>
 </html>

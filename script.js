@@ -1,12 +1,34 @@
 const cursorDesign = document.querySelector('.cursor-style');
+const cursorDesign2 = document.querySelector('.cursor-style2');
 
 document.addEventListener("mousemove", movecursor);
 
 function movecursor(e){
     let x = e.clientX;
     let y = e.clientY;
-    document.querySelector('.cursor-style').style.top = y+'px';
-    document.querySelector('.cursor-style').style.left = x+'px';
-    document.querySelector('.cursor-style2').style.top = y+'px';
-    document.querySelector('.cursor-style2').style.left = x+'px';
+    cursorDesign.style.top = y+'px';
+    cursorDesign.style.left = x+'px';
+    cursorDesign2.style.top = y+'px';
+    cursorDesign2.style.left = x+'px';
+}
+
+
+const toggleGreet = document.querySelector("#pop > button");
+const popDiv = document.querySelector("#pop div");
+
+toggleGreet.addEventListener('click', () => {
+    popDiv.style.left = 0 + "px";
+    toggleGreet.style.opacity = 0;
+});
+
+
+function greet(){
+    const name = document.querySelector("#pop input").value;
+    
+    const userName = document.getElementById("greetingUser");
+    userName.innerHTML = `Welcome ${name}`;
+    popDiv.style.left = -250 + "px";
+    toggleGreet.style.opacity = 1;
+    const contactName = document.getElementById("contactname")
+    contactName.setAttribute("value", name)
 }
