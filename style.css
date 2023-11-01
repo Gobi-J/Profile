@@ -99,7 +99,7 @@ main{
     font-family: var(--font-bold);
     color: transparent;
     font-size: 17rem;
-    background-color: hsl(205, 72%, 28%);
+    background-color: hsl(205, 72%, 50%);
     background-image: url('https://images.unsplash.com/photo-1696400866069-280513cb2d02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1884&q=80');
     background-position: center;
     -webkit-background-clip: text;
@@ -714,21 +714,6 @@ footer{
     left: auto;
     right: 2%;
 }
-/* .menu-items a{
-    position: relative;
-}
-.menu-items a::before{
-    content: attr(data-item);
-    color: var(--dark-8);
-    position: absolute;
-    left: -160px;
-    background-color: var(--dark-3);
-    width: 160px;
-    opacity: 0;
-}
-.menu-items a:hover a::before{
-    opacity: 1;
-} */
 .menu-items ul li,
 .socials ul li{
     list-style: none;
@@ -740,11 +725,32 @@ footer{
     color: var(--white);
     font-size: 1.4rem;
 }
+.social-sm{
+    display: none;
+}
 @media screen and (max-width:900px) {
     .socials,
     .menu-items{
         display: none;
     }
+    .social-sm{
+        display: block;
+    }
+}
+.social-sm ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-sm ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.social-sm a{
+    text-decoration: none;
+    color: var(--dark-4);
+    font-size: 1.4rem;
 }
 
 .popup{
