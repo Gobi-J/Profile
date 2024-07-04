@@ -104,18 +104,9 @@ main{
     background-position: center;
     -webkit-background-clip: text;
     background-clip: text;
-    /* -webkit-mask: linear-gradient(to top, transparent 10%, black 90%);
-    mask: linear-gradient(to top, transparent 10%, black 90%); */
     animation: changeFont 3s infinite linear;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Glitch&family=Train+One&display=swap'); */
-/* @keyframes changeFont{
-    25%{font-family: var(--font-main)}
-    50%{font-family: var(--font-cursive)}
-    75%{font-family: var(--font-cursive)}
-    100%{font-family: var(--font-bold)}
-} */
 .hero span{
     font-family: var(--font-cursive);
     color: var(--dark-5);
