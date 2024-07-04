@@ -36,3 +36,35 @@ function greet(){
     const contactName = document.getElementById("contactname")
     contactName.setAttribute("value", name)
 }
+const navSections = document.querySelectorAll('section, main');
+const mainNav = document.querySelectorAll('.menu-items');
+
+function handleScroll() {
+    const curPos = window.scrollY + 300;
+
+    navSections.forEach(function (section) {
+        const top = section.offsetTop,
+            bottom = top + section.offsetHeight;
+
+        if (curPos >= top && curPos <= bottom) {
+                mainNav.forEach(function (nav) {
+                    nav.querySelectorAll('li').forEach(function (li) {
+                        li.classList.remove('active');
+                    });
+                });
+            
+            mainNav.forEach(function (nav) {
+                const link = nav.querySelector('a[href="#' + section.id + '"]');
+                if (link) {
+                    link.parentNode.classList.add('active');
+                }
+            });
+        }
+
+        if (curPos < 200) {
+            document.querySelector('.menu-items ul:first-child li:first-child').classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);

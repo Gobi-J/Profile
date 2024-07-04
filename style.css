@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Sacramento&family=Secular+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital@0;1&display=swap');
 :root{
  --font-bold: 'Secular One', sans-serif;
  --font-cursive: 'Sacramento', cursive;
@@ -97,16 +97,25 @@ main{
 }
 .hero h1{
     font-family: var(--font-bold);
-    color: transparent;
     font-size: 17rem;
+    color: transparent;
     background-color: hsl(205, 72%, 50%);
     background-image: url('https://images.unsplash.com/photo-1696400866069-280513cb2d02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1884&q=80');
     background-position: center;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-mask: linear-gradient(to top, transparent 10%, black 90%);
-    mask: linear-gradient(to top, transparent 10%, black 90%);
+    /* -webkit-mask: linear-gradient(to top, transparent 10%, black 90%);
+    mask: linear-gradient(to top, transparent 10%, black 90%); */
+    animation: changeFont 3s infinite linear;
 }
+
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Glitch&family=Train+One&display=swap'); */
+/* @keyframes changeFont{
+    25%{font-family: var(--font-main)}
+    50%{font-family: var(--font-cursive)}
+    75%{font-family: var(--font-cursive)}
+    100%{font-family: var(--font-bold)}
+} */
 .hero span{
     font-family: var(--font-cursive);
     color: var(--dark-5);
@@ -137,7 +146,7 @@ main{
     justify-content: center;
 }
 .abouts{
-    background: #666d;
+    background: #9f9f9fe8;
     width: max(340px, 60%);
     margin: auto;
     display: flex;
@@ -151,10 +160,27 @@ main{
 #about p{
     text-align: justify;
     letter-spacing: .125rem;
-    color: var(--dark-9);
+    color: hsl(0 0% 80% / 0.2);
     font-size: 1.5rem;
     padding: 10px;
 }
+.about-text span{
+    background-clip: text;
+    background-size: 0% 100%;
+    /* background-image: linear-gradient(90deg, red, blue); */
+    background-image: linear-gradient(90deg, var(--dark-1), var(--dark-1));
+    background-repeat: no-repeat;
+    animation: lineAni linear forwards;
+    animation-timeline: view();
+    animation-range-start: 10vh;
+    animation-range-end: 65vh;
+}
+@keyframes lineAni{
+    to{background-size: 100% 100%;}
+}
+
+
+
 .about-content{
     padding-bottom: 20px;
 }
@@ -707,23 +733,32 @@ footer{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    left: 2%;
+    right: 2%;
     z-index: 100;
 }
 .menu-items{
-    left: auto;
-    right: 2%;
+    right: auto;
+    left: 2%;
 }
 .menu-items ul li,
 .socials ul li{
     list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 .menu-items a,
 .socials a{
     text-decoration: none;
     color: var(--white);
     font-size: 1.4rem;
+    padding: 10px;
+    border-radius: 50%;
+}
+.active a, .menu-items li:hover a{
+    color: var(--dark-1);
+    background: var(--white);
+}
+.socials li:hover{
+    transform: translateX(-5px);
 }
 .social-sm{
     display: none;
@@ -797,9 +832,6 @@ footer{
     transition: color 0.4s ease-in-out;
     }
 }
-
-
-
 
 .proj-links a:not(:first-child){
     display: none;
